@@ -55,9 +55,9 @@ const ProductDetail = () => {
                 <h1>
                   {title}
                 </h1>
-                <a href="#">
+                <div>
                   {price}
-                </a>
+                </div>
                 <h3>
                   {category}
                 </h3>
