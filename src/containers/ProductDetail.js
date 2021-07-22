@@ -10,34 +10,48 @@ const ProductDetail = () => {
   const dispatch = useDispatch()
   const { productId } = useParams()
 
-  const fetchProductDetail = async () => {
-    const response = await axios
+  // const fetchProductDetail = async () => {
+  //   const response = await axios
+  //     .get(`https://fakestoreapi.com/products/${productId}`)
+  //     .catch(err => {
+  //       console.log('Error')
+  //     })
+
+  //   dispatch(selectedProduct(response.data))
+  // }
+
+  useEffect(() => {
+    const fetchProductDetail = async () => {
+      const response = await axios
       .get(`https://fakestoreapi.com/products/${productId}`)
       .catch(err => {
         console.log('Error')
       })
-
-    dispatch(selectedProduct(response.data))
-  }
-
-  useEffect(() => {
+      
+      dispatch(selectedProduct(response.data))
+    }
+    
     if (productId && productId !== '') fetchProductDetail()
 
     return () => {
       dispatch(removeSelectedProduct())
     }
-  }, [productId])
+  }, [dispatch, productId])
 
   return (
     <div className=" container">
       <div className="row">
-        <div class="col s12">
+        <div className="col s12">
           {
             Object.keys(product).length === 0 ? (
               <div>Loading...</div>
             ) : (
               <div >
-                <img className="center" src={image} alt="product" />
+                <img
+                  className="center"
+                  src={image}
+                  alt="product"
+                />
                 <h1>
                   {title}
                 </h1>

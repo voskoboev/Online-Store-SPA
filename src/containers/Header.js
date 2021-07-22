@@ -4,7 +4,10 @@ const Header = () => (
   <header>
     <nav>
       <div className="nav-wrapper purple lighten-1">
-        <a href="#" className="brand-logo center">
+        <a
+          href="#"
+          className="brand-logo center"
+        >
           Trendy Shop
         </a>
       </div>

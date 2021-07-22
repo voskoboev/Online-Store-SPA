@@ -23,7 +23,7 @@ const ProductList = () => {
 
   return (
     <div className="container ">
-      <div class="row">
+      <div className="row">
         <ProductItem />
       </div>
     </div>

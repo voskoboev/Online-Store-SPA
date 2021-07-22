@@ -33,7 +33,7 @@ const ProductItem = () => {
                 // }}
                 />
               </div>
-              <div class="card-content">
+              <div className="card-content">
                 <span
                   className="card-title black-text"
                   style={{
