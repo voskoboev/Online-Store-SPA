@@ -1,18 +1,16 @@
 import React from 'react'
 
-const Header = () => {
-
-
-  return (
-    <div className="ui fixed menu">
-      <div className="ui container center">
-        <h1>
+const Header = () => (
+  <header>
+    <nav>
+      <div className="nav-wrapper purple lighten-1">
+        <a href="#" className="brand-logo center">
           Trendy Shop
-        </h1>
+        </a>
       </div>
-    </div>
-  )
-}
+    </nav>
+  </header>
+)
 
 export default Header
 
